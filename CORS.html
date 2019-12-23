@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $.ajax({
+          type:"GET",
+          url:"https://jin62webservice.s3.ap-northeast-2.amazonaws.com/imgload.html",
+          dataType:"text",
+          error:function(){
+            alert('error');
+          },
+          success:function(data){
+            $("#imgArea").html(data);
+          }
+        });
+      });
+    </script>
+  <body>
+    <div id="imgArea"></div>
+  </body>
+</html>
